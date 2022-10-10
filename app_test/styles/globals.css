@@ -15,6 +15,10 @@ a {
   box-sizing: border-box;
 }
 
+nav:hover{
+  color:dimgrey;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
