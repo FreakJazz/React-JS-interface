@@ -1,12 +1,9 @@
-
-import './App';
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
+      <h1>
         POKEMON APP
-      </header>
+      </h1>
     </div>
   );
 }
