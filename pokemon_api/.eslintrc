@@ -7,7 +7,6 @@
   "parser": "@typescript-eslint/parser",
   "extends": [
     "airbnb-base",
-    "prettier",
     "react-app",
     "plugin:jsx-a11y/recommended"
   ],
