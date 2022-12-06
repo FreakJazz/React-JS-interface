@@ -1,0 +1,28 @@
+{
+  "root": true,
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "airbnb-base",
+    "some-other-config-you-use",
+    "prettier",
+    "react-app",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "rules": {
+    "linebreak-style": 0,
+    "react/jsx-curly-brace-presence": "off",
+    "react/jsx-wrap-multilines": "off",
+    "operator-linebreak": [
+      "error",
+      "after",
+      { "overrides": { "?": "before", ":": "before", "&&": "before" } }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/require-default-props": "off"
+  }
+}
