@@ -1,4 +1,3 @@
-
 export const baseThemeOptions = {
     breakpoints: {
       values: {

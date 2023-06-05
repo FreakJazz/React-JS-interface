@@ -1,7 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './components/App';
+import App from '../src/components/home/App';
+import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(<>
+ReactDOM.render(
+  <React.StrictMode>
     <App />
-  </>, document.getElementById('root'));
+  </React.StrictMode>,
+   document.getElementById('root'));
+   reportWebVitals();
