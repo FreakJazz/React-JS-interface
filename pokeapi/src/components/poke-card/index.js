@@ -3,21 +3,26 @@ import axios from 'axios';
 import { Card, CardContent, CardMedia, Typography, Popover, List, ListItem, ListItemText } from '@mui/material';
 
 const PokeCard = ({ pokemonName }) => {
-  const [pokemonData, setPokemonData] = useState(null);
+  console.log(pokemonName)
   const [anchorEl, setAnchorEl] = useState(null);
 
-  useEffect(() => {
-    try{
-      const response = axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonName}/`)
-      setPokemonData(response.data)
-      console.log(response.data)
-    }
-    catch (error){
-      console.error(error)
+  const [pokemonData, setPokemonData] = useState(null);
 
-    }
-   
-  }, [pokemonName]);
+  useEffect(() => {
+    // URL de la API que deseas consultar
+    const apiUrl = 'https://pokeapi.co/api/v2/pokemon/'+pokemonName;
+
+    // Realizar la solicitud GET con Axios
+    axios.get(apiUrl)
+      .then(response => {
+        // Aquí puedes manejar los datos de respuesta
+        setPokemonData(response.data);
+      })
+      .catch(error => {
+        // Aquí puedes manejar los errores en caso de que ocurran
+        console.error(error);
+      });
+  }, []);
 
   const handlePopoverOpen = (event) => {
     setAnchorEl(event.currentTarget);

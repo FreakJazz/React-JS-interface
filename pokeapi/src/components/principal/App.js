@@ -2,9 +2,9 @@ import './styles.css';
 import PokeCard from '../poke-card';
 
 const pokemonList = [
-  'bulbasaur',
-  'charmander',
-  'squirtle',
+  '1',
+  '2',
+  '3',
 ];
 
 function App() {
