@@ -22,7 +22,7 @@ const PokeCard = ({ pokemonName }) => {
         // Aquí puedes manejar los errores en caso de que ocurran
         console.error(error);
       });
-  }, []);
+  }, [pokemonName]);
 
   const handlePopoverOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -48,7 +48,7 @@ const PokeCard = ({ pokemonName }) => {
       />
       <CardContent>
         <Typography gutterBottom variant="h6" component="div">
-          {pokemonName}
+          {pokemonData?.forms[0]?.name}
         </Typography>
       </CardContent>
       <Popover

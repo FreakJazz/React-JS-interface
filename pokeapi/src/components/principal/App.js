@@ -3,8 +3,11 @@ import PokeCard from '../poke-card';
 
 const pokemonList = [
   '1',
-  '2',
-  '3',
+  '4',
+  '7',
+  '11',
+  '14',
+  '17',
 ];
 
 function App() {
