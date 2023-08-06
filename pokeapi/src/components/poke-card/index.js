@@ -1,27 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { Card, CardContent, CardMedia, Typography, Popover, List, ListItem, ListItemText } from '@mui/material';
+import { PokeApi } from '../../services/poke-api'
 
 const PokeCard = ({ pokemonName }) => {
-  console.log(pokemonName)
   const [anchorEl, setAnchorEl] = useState(null);
 
   const [pokemonData, setPokemonData] = useState(null);
 
   useEffect(() => {
-    // URL de la API que deseas consultar
-    const apiUrl = 'https://pokeapi.co/api/v2/pokemon/'+pokemonName;
-
-    // Realizar la solicitud GET con Axios
-    axios.get(apiUrl)
-      .then(response => {
-        // Aquí puedes manejar los datos de respuesta
-        setPokemonData(response.data);
-      })
-      .catch(error => {
-        // Aquí puedes manejar los errores en caso de que ocurran
-        console.error(error);
-      });
+    PokeApi(pokemonName).then(
+    data => (setPokemonData(data)));
   }, [pokemonName]);
 
   const handlePopoverOpen = (event) => {
@@ -43,7 +31,7 @@ const PokeCard = ({ pokemonName }) => {
       <CardMedia
         component="img"
         height="140"
-        image={pokemonData?.sprites?.front_default}
+        image={pokemonData?.sprites?.other.home.front_default}
         alt={pokemonName}
       />
       <CardContent>
