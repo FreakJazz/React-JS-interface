@@ -9,7 +9,7 @@
 # POKEAPI-REACT.md
 ![](https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png)
 ![](https://tusharf5.com/assets/header.bfa5b8b6.png)
-![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![]](https://img.shields.io/bower/v/editor.md.svg)
+![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
 
 **Table of Contents**
 
