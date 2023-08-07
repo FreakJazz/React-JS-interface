@@ -8,9 +8,7 @@
 - [Description](#description)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
+  - [Links](#links)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 - [Contact](#contact)
@@ -55,5 +53,5 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 ## Acknowledgments
 The team behind the PokeAPI for providing the data used in this project.
 The React and Material-UI communities for creating powerful and user-friendly tools.
-Contact
+## Contact
 If you have any questions or feedback, feel free to contact me at jazzrb2307@gmail.com
