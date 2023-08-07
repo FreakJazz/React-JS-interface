@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Card, CardContent, CardMedia, Typography, Popover, List, ListItem, ListItemText } from '@mui/material';
+import { Card, CardContent, CardMedia, Typography, Popover } from '@mui/material';
 import { PokeApi } from '../../services/poke-api'
-
+import {PopupPokemon} from '../pop-up'
 const PokeCard = ({ pokemonName }) => {
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -13,10 +13,12 @@ const PokeCard = ({ pokemonName }) => {
   }, [pokemonName]);
 
   const handlePopoverOpen = (event) => {
+    console.log("entro al open");
     setAnchorEl(event.currentTarget);
   };
 
   const handlePopoverClose = () => {
+    console.log("entro al close");
     setAnchorEl(null);
   };
 
@@ -30,8 +32,10 @@ const PokeCard = ({ pokemonName }) => {
     >
       <CardMedia
         component="img"
-        width='10px'
-        height="auto"
+        sx={{ width: '200px', height: 'auto', objectFit: 'cover', cursor: 'pointer',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center', }}
         image={pokemonData?.sprites?.other.home.front_default}
         alt={pokemonName}
       />
@@ -39,31 +43,26 @@ const PokeCard = ({ pokemonName }) => {
         <Typography gutterBottom variant="h4" component="div">
           {pokemonData?.forms[0]?.name}
         </Typography>
+        <Typography gutterBottom variant="h4" component="div">
+          {`Altura: ${pokemonData?.height / 10} m`}
+        </Typography>
+        <Typography gutterBottom variant="h4" component="div">
+          {`Peso: ${pokemonData?.weight / 10} kg`}
+        </Typography>
       </CardContent>
       <Popover
         open={open}
         anchorEl={anchorEl}
         onClose={handlePopoverClose}
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'center',
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
         }}
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'center',
-        }}
+        
       >
-        <List>
-          <ListItem>
-            <ListItemText primary={`ID: ${pokemonData?.id}`} />
-          </ListItem>
-          <ListItem>
-            <ListItemText primary={`Altura: ${pokemonData?.height / 10} m`} />
-          </ListItem>
-          <ListItem>
-            <ListItemText primary={`Peso: ${pokemonData?.weight / 10} kg`} />
-          </ListItem>
-        </List>
+        <PopupPokemon pokemonNumber={pokemonData?.id} />
+          
       </Popover>
     </Card>
   );
