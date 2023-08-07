@@ -17,11 +17,12 @@
 
 [TOC]
 
-##Description
+## Description
 
 Taking Advantage Of The Pokeapi
 ## Getting Started
 npx create-react-app pokeapi-react
+
 ### Prerequisites
 
 - Node.js and npm installed on your machine.
@@ -34,17 +35,17 @@ PokeAPI: The API that provides data about Pokémon.
 Contributing
 Contributions are welcome! If you find any issues or want to add new features, feel free to open a pull request.
 
-###Links
+### Links
 
 [React](https://es.react.dev/)
 
 [Axios](https://axios-http.com/es/docs/example)
 
 
-##License
+## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
 
-##Acknowledgments
+## Acknowledgments
 The team behind the PokeAPI for providing the data used in this project.
 The React and Material-UI communities for creating powerful and user-friendly tools.
 Contact
