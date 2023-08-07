@@ -1,21 +1,28 @@
-### Features
+# POKEAPI-REACT.md
+![](https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png)
+![](https://tusharf5.com/assets/header.bfa5b8b6.png)
+![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
+
+## Table of Contents
+- [Features](#features)
+- [Description](#description)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+- [Contact](#contact)
+
+
+## Features
 
 - PokeAPI / React App;
 - View a list of Pokémon with their names, informations and images.
 - Click on a Pokémon to view transformations detailed such as types, height, weight, and abilities.
 - Search for Pokémon by name.
 - Filter Pokémon by type.
-
-# POKEAPI-REACT.md
-![](https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png)
-![](https://tusharf5.com/assets/header.bfa5b8b6.png)
-![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
-
-**Table of Contents**
-
-[TOCM]
-
-[TOC]
 
 ## Description
 
