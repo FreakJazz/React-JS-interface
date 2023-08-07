@@ -24,18 +24,19 @@ const PokeCard = ({ pokemonName }) => {
 
   return (
     <Card
-      sx={{ maxWidth: 200, margin: '1rem' }}
+      sx={{ width: "auto", margin: '1rem' }}
       onMouseEnter={handlePopoverOpen}
       onMouseLeave={handlePopoverClose}
     >
       <CardMedia
         component="img"
-        height="140"
+        width='10px'
+        height="auto"
         image={pokemonData?.sprites?.other.home.front_default}
         alt={pokemonName}
       />
       <CardContent>
-        <Typography gutterBottom variant="h6" component="div">
+        <Typography gutterBottom variant="h4" component="div">
           {pokemonData?.forms[0]?.name}
         </Typography>
       </CardContent>

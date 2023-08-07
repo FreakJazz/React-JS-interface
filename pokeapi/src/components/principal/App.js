@@ -1,15 +1,10 @@
 import './styles.css';
 import PokeCard from '../poke-card';
+import { numeros } from '../../constants/generate-numbers';
+import { handleScroll } from '../../constants/generate-numbers';
+import { Grid } from '@mui/material';
 
-const pokemonList = [
-  '1',
-  '4',
-  '7',
-  '11',
-  '14',
-  '17',
-];
-
+window.addEventListener('scroll', handleScroll);
 function App() {
   return (
     <div className="App">
@@ -18,11 +13,13 @@ function App() {
           POKEMON
         </p>
       </header>
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-      {pokemonList.map(pokemon => (
-        <PokeCard key={pokemon} pokemonName={pokemon} />
+      <Grid container style={{ display: 'flex', flexWrap: 'wrap' }}>
+      {numeros.map(pokemon => (
+        <Grid item md={4} sx ={{padding:'3%'}}>
+          <PokeCard key={pokemon} pokemonName={pokemon} />
+        </Grid>
       ))}
-    </div>
+    </Grid>
     </div>
   );
 }
